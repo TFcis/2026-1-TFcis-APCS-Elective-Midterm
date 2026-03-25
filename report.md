@@ -12,13 +12,13 @@
 | name |  [:white_check_mark:](pA/problem.json)<br>NoMonsterNoRider | [:white_check_mark:](pB/problem.json)<br>NoPoisonNoHealth | [:white_check_mark:](pC/problem.json)<br>NoSpaceNoGame | [:white_check_mark:](pD/problem.json)<br>NoIceNoChance |
 | title |  [:white_check_mark:](pA/problem.json)<br>雜魚沒有清掉 | [:white_check_mark:](pB/problem.json)<br>飲食沒有均衡 | [:white_check_mark:](pC/problem.json)<br>硬碟沒有空間 | [:white_check_mark:](pD/problem.json)<br>吃冰沒有頭痛 |
 | memory_limit |  512 | 512 | 512 | 512 |
-| time_limit |  1.0 | 1.0 | 1.0 | 1.0 |
+| time_limit |  1.0 | 1.0 | 3.0 | 1.0 |
 | has_checker |  False | False | False | True |
-| gen | [:x:](pA/gen)<br>[gen.cpp](pA/gen/gen.cpp)<br>[data](pA/gen/data) | [:x:](pB/gen)<br>[gen.cpp](pB/gen/gen.cpp)<br>[data](pB/gen/data) | [:x:](pC/gen)<br>[gen.cpp](pC/gen/gen.cpp)<br>[data](pC/gen/data) | [:white_check_mark:](pD/gen) |
-| solution | [:x:](pA/solution)<br>[correct.cpp](pA/solution/correct.cpp) | [:x:](pB/solution)<br>[correct.cpp](pB/solution/correct.cpp) | [:x:](pC/solution)<br>[correct.cpp](pC/solution/correct.cpp) | [:white_check_mark:](pD/solution) |
-| validator | [:x:](pA/validator)<br>[validator.cpp](pA/validator/validator.cpp) | [:x:](pB/validator)<br>[validator.cpp](pB/validator/validator.cpp) | [:x:](pC/validator)<br>[validator.cpp](pC/validator/validator.cpp) | [:white_check_mark:](pD/validator) |
+| gen | [:x:](pA/gen)<br>[gen.cpp](pA/gen/gen.cpp)<br>[data](pA/gen/data) | [:x:](pB/gen)<br>[gen.cpp](pB/gen/gen.cpp)<br>[data](pB/gen/data) | [:x:](pC/gen)<br>[data](pC/gen/data) | [:white_check_mark:](pD/gen) |
+| solution | [:x:](pA/solution)<br>[correct.cpp](pA/solution/correct.cpp) | [:x:](pB/solution)<br>[correct.cpp](pB/solution/correct.cpp) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) |
+| validator | [:x:](pA/validator)<br>[validator.cpp](pA/validator/validator.cpp) | [:x:](pB/validator)<br>[validator.cpp](pB/validator/validator.cpp) | [:white_check_mark:](pC/validator) | [:white_check_mark:](pD/validator) |
 | subtasks.json<br>global_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) |
-| tests | [:x:](pA/tests)<br>[Auto build disabled](pA/gen/DISABLE_AUTO_BUILD) | [:x:](pB/tests)<br>[Auto build disabled](pB/gen/DISABLE_AUTO_BUILD) | [:x:](pC/tests)<br>[Auto build disabled](pC/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pD/tests)<br>[Auto build disabled](pD/gen/DISABLE_AUTO_BUILD) |
+| tests | [:x:](pA/tests)<br>[Auto build disabled](pA/gen/DISABLE_AUTO_BUILD) | [:x:](pB/tests)<br>[Auto build disabled](pB/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pC/tests)<br>[Auto build disabled](pC/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pD/tests)<br>[Auto build disabled](pD/gen/DISABLE_AUTO_BUILD) |
 | statement/index.md | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) |
 | statement/index.pdf | [:white_check_mark:](pA/statement/index.pdf)<br>[Auto build disabled](pA/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pB/statement/index.pdf)<br>[Auto build disabled](pB/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pC/statement/index.pdf)<br>[Auto build disabled](pC/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pD/statement/index.pdf)<br>[Auto build disabled](pD/statement/DISABLE_AUTO_BUILD) |
 
@@ -31,7 +31,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | A | 100<br>無額外限制 |
 | B | 100<br>無額外限制 |
-| C | 100<br>無額外限制 |
+| C | 15<br>不存在資料夾 | 15<br>資料夾不包含資料夾 | 15<br>$n\leq 2000$ | 15<br>「資料夾內的檔案編號」必小於「所在的資料夾編號」 | 15<br>「資料夾內的檔案大小」必小於「所在的資料夾檔案大小」 | 25<br>無額外限制 |
 | D | 15<br>$n = 3$ | 15<br>$n\leq 8$ | 15<br>$k < \min(A_1, A_2, \ldots, A_n)$ | 15<br>$1\leq A_i\leq n$ | 15<br>$n\leq 2000$ | 25<br>無額外限制 |
 
 <!-- subtasks end -->
@@ -41,49 +41,77 @@
 
 | score | count |
 | --- | --- |
-| 15 | 5 |
-| 25 | 1 |
-| 30 | 10 |
-| 40 | 5 |
-| 45 | 10 |
-| 55 | 10 |
-| 60 | 5 |
-| 70 | 10 |
-| 75 | 1 |
-| 85 | 5 |
-| 100 | 4 |
-| 115 | 15 |
-| 125 | 3 |
-| 130 | 30 |
-| 140 | 15 |
-| 145 | 30 |
-| 155 | 30 |
-| 160 | 15 |
-| 170 | 30 |
-| 175 | 3 |
-| 185 | 15 |
-| 200 | 6 |
-| 215 | 15 |
-| 225 | 3 |
-| 230 | 30 |
-| 240 | 15 |
-| 245 | 30 |
-| 255 | 30 |
-| 260 | 15 |
-| 270 | 30 |
-| 275 | 3 |
-| 285 | 15 |
-| 300 | 4 |
-| 315 | 5 |
-| 325 | 1 |
-| 330 | 10 |
-| 340 | 5 |
-| 345 | 10 |
-| 355 | 10 |
-| 360 | 5 |
-| 370 | 10 |
-| 375 | 1 |
-| 385 | 5 |
+| 15 | 10 |
+| 25 | 2 |
+| 30 | 45 |
+| 40 | 20 |
+| 45 | 120 |
+| 50 | 1 |
+| 55 | 90 |
+| 60 | 210 |
+| 65 | 10 |
+| 70 | 240 |
+| 75 | 252 |
+| 80 | 45 |
+| 85 | 420 |
+| 90 | 210 |
+| 95 | 120 |
+| 100 | 506 |
+| 105 | 120 |
+| 110 | 210 |
+| 115 | 440 |
+| 120 | 45 |
+| 125 | 256 |
+| 130 | 330 |
+| 135 | 10 |
+| 140 | 250 |
+| 145 | 330 |
+| 150 | 3 |
+| 155 | 300 |
+| 160 | 440 |
+| 165 | 20 |
+| 170 | 525 |
+| 175 | 506 |
+| 180 | 90 |
+| 185 | 850 |
+| 190 | 420 |
+| 195 | 240 |
+| 200 | 1010 |
+| 205 | 240 |
+| 210 | 420 |
+| 215 | 850 |
+| 220 | 90 |
+| 225 | 506 |
+| 230 | 525 |
+| 235 | 20 |
+| 240 | 440 |
+| 245 | 300 |
+| 250 | 3 |
+| 255 | 330 |
+| 260 | 250 |
+| 265 | 10 |
+| 270 | 330 |
+| 275 | 256 |
+| 280 | 45 |
+| 285 | 440 |
+| 290 | 210 |
+| 295 | 120 |
+| 300 | 506 |
+| 305 | 120 |
+| 310 | 210 |
+| 315 | 420 |
+| 320 | 45 |
+| 325 | 252 |
+| 330 | 240 |
+| 335 | 10 |
+| 340 | 210 |
+| 345 | 90 |
+| 350 | 1 |
+| 355 | 120 |
+| 360 | 20 |
+| 370 | 45 |
+| 375 | 2 |
+| 385 | 10 |
 | 400 | 1 |
 
 <!-- scores end -->
