@@ -5,5 +5,21 @@
     "brute.cpp": {
         "verdict": "time_limit",
         "except": {"samples": "correct", "n3": "correct", "n8": "correct"}
+    },
+    "odd_fakesol.cpp": {
+        "verdict": "incorrect",
+        "except": {"n3": "correct"}
+    },
+    "s4_kmin.cpp": {
+        "verdict": "incorrect",
+        "except": {"kmin": "correct"}
+    },
+    "s5_kmax.cpp": {
+        "verdict": "incorrect",
+        "except": {"Ai1ton": "correct"}
+    },
+	"s6_n2slow.cpp": {
+        "verdict": "time_limit",
+        "except": {"samples": "correct", "n3": "correct", "n8": "correct", "n2000": "correct"}
     }
 }

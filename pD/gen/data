@@ -5,4 +5,129 @@ manual example-1.in
 manual example-2.in
 manual example-3.in
 
+@subtask n3
+gen 1 3 A
+gen 1 3 B
+gen 1 3 C
+gen 1 3 1 A
+gen 1 3 1 B
+gen 1 3 1 C
+
+@subtask n8
+gen 2 1 A
+gen 2 1 B
+gen 2 2 A
+gen 2 2 B
+gen 2 4 A
+gen 2 4 B
+gen 2 4 C
+gen 2 4 1 D
+gen 2 7 A
+gen 2 7 B
+gen 2 7 C
+gen 2 7 1 D
+gen 2 8 A
+gen 2 8 B
+gen 2 8 C
+gen 2 8 D
+gen 2 8 1 E
+gen 2 8 1 F
+
+@subtask kmin
+gen 3 1000 A
+gen 3 3001 A
+gen 3 5000 1 A
+gen 3 20001 A
+gen 3 40000 A
+gen 3 80001 A
+gen 3 20000 1 A
+gen 3 40001 1 A
+gen 3 80000 1 A
+gen 3 100000 A
+gen 3 99999 B
+gen 3 100000 C
+gen 3 99999 1 A
+gen 3 100000 1 B
+gen 3 99999 1 C
+gen 3 100000 2 B
+gen 3 99999 2 C
+gen 3 100000 3 B
+gen 3 99999 3 C
+
+@subtask Ai1ton
+gen 4 1000 A
+gen 4 3001 A
+gen 4 5000 1 A
+gen 4 20001 A
+gen 4 40000 A
+gen 4 80001 A
+gen 4 20000 1 A
+gen 4 40001 1 A
+gen 4 80000 1 A
+gen 4 100000 A
+gen 4 99999 B
+gen 4 100000 C
+gen 4 99999 1 A
+gen 4 100000 1 B
+gen 4 99999 1 C
+gen 4 100000 2 A
+gen 4 99999 3 A
+
+@subtask n2000
+gen 5 99 A
+gen 5 99 1 A
+gen 5 256 A
+gen 5 256 1 A
+gen 5 1939 A
+gen 5 1939 1 A
+gen 5 1980 A
+gen 5 1980 1 A
+gen 5 1999 A
+gen 5 1999 1 A
+gen 5 1999 B
+gen 5 1999 1 B
+gen 5 1999 C
+gen 5 1999 1 C
+gen 5 1999 D
+gen 5 1999 1 D
+gen 5 2000 A
+gen 5 2000 1 A
+gen 5 2000 B
+gen 5 2000 1 B
+gen 5 2000 C
+gen 5 2000 1 C
+gen 5 2000 D
+gen 5 2000 1 D
+
+@subtask full
+gen 6 89576 A
+gen 6 87895 A
+gen 6 97653 A
+gen 6 94436 A
+gen 6 98084 A
+gen 6 99699 A
+gen 6 99999 A
+gen 6 99999 B
+gen 6 99999 C
+gen 6 99999 D
+gen 6 99999 E
+gen 6 99999 F
+gen 6 99999 G
+gen 6 99999 H
+gen 6 99999 1 H
+gen 6 99999 2 I
+gen 6 99999 2 J
+gen 6 99999 3 K
+gen 6 100000 A
+gen 6 100000 B
+gen 6 100000 C
+gen 6 100000 D
+gen 6 100000 E
+gen 6 100000 F
+gen 6 100000 G
+gen 6 100000 H
+gen 6 100000 1 H
+gen 6 100000 2 I
+gen 6 100000 2 J
+gen 6 100000 3 K
 
