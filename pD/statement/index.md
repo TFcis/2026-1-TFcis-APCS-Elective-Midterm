@@ -45,8 +45,20 @@
 
 \clearpage
 
-## 範例輸入
+## 範例輸入一
 \testfile{0-01.in}
 
-## 範例輸出
+## 範例輸出一
 \testfile{0-01.out}
+
+## 範例輸入二
+\testfile{0-02.in}
+
+## 範例輸出二
+\testfile{0-02.out}
+
+## 範例輸入三
+\testfile{0-03.in}
+
+## 範例輸出三
+\testfile{0-03.out}
