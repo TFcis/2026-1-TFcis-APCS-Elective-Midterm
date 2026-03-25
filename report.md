@@ -14,9 +14,9 @@
 | memory_limit |  512 | 512 | 512 | 512 |
 | time_limit |  1.0 | 1.0 | 1.0 | 1.0 |
 | has_checker |  False | False | False | True |
-| gen | [:x:](pA/gen)<br>[gen.cpp](pA/gen/gen.cpp)<br>[data](pA/gen/data) | [:x:](pB/gen)<br>[gen.cpp](pB/gen/gen.cpp)<br>[data](pB/gen/data) | [:x:](pC/gen)<br>[gen.cpp](pC/gen/gen.cpp)<br>[data](pC/gen/data) | [:x:](pD/gen)<br>[gen.cpp](pD/gen/gen.cpp) |
+| gen | [:x:](pA/gen)<br>[gen.cpp](pA/gen/gen.cpp)<br>[data](pA/gen/data) | [:x:](pB/gen)<br>[gen.cpp](pB/gen/gen.cpp)<br>[data](pB/gen/data) | [:x:](pC/gen)<br>[gen.cpp](pC/gen/gen.cpp)<br>[data](pC/gen/data) | [:white_check_mark:](pD/gen) |
 | solution | [:x:](pA/solution)<br>[correct.cpp](pA/solution/correct.cpp) | [:x:](pB/solution)<br>[correct.cpp](pB/solution/correct.cpp) | [:x:](pC/solution)<br>[correct.cpp](pC/solution/correct.cpp) | [:white_check_mark:](pD/solution) |
-| validator | [:x:](pA/validator)<br>[validator.cpp](pA/validator/validator.cpp) | [:x:](pB/validator)<br>[validator.cpp](pB/validator/validator.cpp) | [:x:](pC/validator)<br>[validator.cpp](pC/validator/validator.cpp) | [:x:](pD/validator)<br>[validator.cpp](pD/validator/validator.cpp) |
+| validator | [:x:](pA/validator)<br>[validator.cpp](pA/validator/validator.cpp) | [:x:](pB/validator)<br>[validator.cpp](pB/validator/validator.cpp) | [:x:](pC/validator)<br>[validator.cpp](pC/validator/validator.cpp) | [:white_check_mark:](pD/validator) |
 | subtasks.json<br>global_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) |
 | tests | [:x:](pA/tests)<br>[Auto build disabled](pA/gen/DISABLE_AUTO_BUILD) | [:x:](pB/tests)<br>[Auto build disabled](pB/gen/DISABLE_AUTO_BUILD) | [:x:](pC/tests)<br>[Auto build disabled](pC/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pD/tests)<br>[Auto build disabled](pD/gen/DISABLE_AUTO_BUILD) |
 | statement/index.md | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) |
