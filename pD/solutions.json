@@ -21,5 +21,9 @@
 	"s6_n2slow.cpp": {
         "verdict": "time_limit",
         "except": {"samples": "correct", "n3": "correct", "n8": "correct", "n2000": "correct"}
+    },
+	"overflow.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n3": "correct"}
     }
 }
