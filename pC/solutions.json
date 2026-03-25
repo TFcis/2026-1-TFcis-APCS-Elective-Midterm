@@ -1,5 +1,17 @@
 {
 	"correct.cpp": {
 		"verdict": "model_solution"
+	},
+	"no_record.cpp": {
+        "verdict": "time_limit",
+        "except": {"samples": "correct", "maxdepth0": "correct", "maxdepth1": "correct", "n2000": "correct"}
+	},
+	"overflow.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "maxdepth0": "correct", "maxdepth1": "correct"}
+	},
+	"no_recurs.cpp": {
+        "verdict": "incorrect",
+        "except": {"maxdepth0": "correct", "maxdepth1": "correct"}
 	}
 }

@@ -1,6 +1,6 @@
 {
     "global_validators": [
-        "validator.cpp"
+        "validator.cpp 0"
     ],
     "subtasks": {
         "samples": {
@@ -9,9 +9,39 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "maxdepth0": {
             "index": 1,
-            "score": 100,
+            "score": 15,
+            "text": "不存在資料夾",
+            "validators": ["validator.cpp 1"]
+        },
+        "maxdepth1": {
+            "index": 2,
+            "score": 15,
+            "text": "資料夾不包含資料夾",
+            "validators": ["validator.cpp 2"]
+        },
+        "n2000": {
+            "index": 3,
+            "score": 15,
+            "text": "$n\\leq 2000$",
+            "validators": ["validator.cpp 3"]
+        },
+        "idinc": {
+            "index": 4,
+            "score": 15,
+            "text": "「資料夾內的檔案編號」必小於「所在的資料夾編號」",
+            "validators": ["validator.cpp 4"]
+        },
+        "bpinc": {
+            "index": 5,
+            "score": 15,
+            "text": "「資料夾內的檔案大小」必小於「所在的資料夾檔案大小」",
+            "validators": ["validator.cpp 5"]
+        },
+        "full": {
+            "index": 6,
+            "score": 25,
             "text": "無額外限制",
             "validators": []
         }
