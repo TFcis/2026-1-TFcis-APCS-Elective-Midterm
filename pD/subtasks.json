@@ -9,9 +9,39 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "n3": {
             "index": 1,
-            "score": 100,
+            "score": 15,
+            "text": "$n = 3$",
+            "validators": ["validator.cpp 1"]
+        },
+        "n8": {
+            "index": 2,
+            "score": 15,
+            "text": "$n\\leq 8$",
+            "validators": ["validator.cpp 2"]
+        },
+        "kmin": {
+            "index": 3,
+            "score": 15,
+            "text": "$k < \\min(A_1, A_2, \\ldots, A_n)$",
+            "validators": ["validator.cpp 3"]
+        },
+        "Ai1ton": {
+            "index": 4,
+            "score": 15,
+            "text": "$1\\leq A_i\\leq n$",
+            "validators": ["validator.cpp 4"]
+        },
+        "n2000": {
+            "index": 5,
+            "score": 15,
+            "text": "$n\\leq 2000$",
+            "validators": ["validator.cpp 5"]
+        },
+        "full": {
+            "index": 6,
+            "score": 25,
             "text": "無額外限制",
             "validators": []
         }
