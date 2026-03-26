@@ -13,5 +13,9 @@
 	"no_recurs.cpp": {
         "verdict": "incorrect",
         "except": {"maxdepth0": "correct", "maxdepth1": "correct"}
+	},
+	"tie_reverse.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct"}
 	}
 }
