@@ -142,6 +142,8 @@ int main(int argc, char* argv[]) {
 	}
 	
 	// 計算總空間數拿來計算 k
+	long long max_space = 0;
+	long long min_space = 1e18;
 	vector< long long > space(n);
 	for (i=0; i<n; i++)
 	{
@@ -151,6 +153,8 @@ int main(int argc, char* argv[]) {
 		{
 			space[idx] += space[ ary[idx][LP]-1 ] + space[ ary[idx][RP]-1 ];
 		}
+		max_space = max(max_space, space[idx]);
+		min_space = min(min_space, space[idx]);
 	}
 	int ii = rnd.next(0, n-1);
 	if (spflag & JUST_K)
@@ -159,7 +163,18 @@ int main(int argc, char* argv[]) {
 	}
 	else
 	{
-		k = rnd.next(1LL, space[ii]);
+		if (rnd.next(0, 3) == 0)
+		{
+			k = max_space;
+		}
+		else if (rnd.next(0, 1))
+		{
+			k = rnd.next(1LL, max_space);
+		}
+		else
+		{
+			k = rnd.next(1LL, min(max_space, min_space + (long long)sqrt(max(1LL, max_space-min_space))));
+		}
 	}
 	
 	// print result

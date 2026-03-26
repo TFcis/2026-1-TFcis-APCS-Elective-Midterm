@@ -29,7 +29,7 @@ int main() {
 	{
 		scanf("%d%d%d", &ary[i], &lp[i], &rp[i]);
 	}
-	int best = 2e9;
+	int best = 2147483647;
 	int ans = 0;
 	for (i=1; i<=n; i++)
 	{

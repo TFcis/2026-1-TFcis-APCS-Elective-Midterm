@@ -28,6 +28,8 @@ gen 2 55555 11111 12 AAAA
 gen 2 333333 99999 0 AAAA
 gen 2 666666 123456 4 AAAA
 gen 2 999999 246812 12 AAAA
+manual 02_overflow_1.in
+manual 02_overflow_2.in
 
 @subtask n2000
 gen 3 1987 -1 0 AAAA
