@@ -1,6 +1,6 @@
 {
     "global_validators": [
-        "validator.cpp"
+        "validator.cpp 0"
     ],
     "subtasks": {
         "samples": {
@@ -9,9 +9,39 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "onlyhealth": {
             "index": 1,
-            "score": 100,
+            "score": 15,
+            "text": "刃牙絕不把食物分給任何人，且食物只找健康營養的",
+            "validators": ["validator.cpp 1"]
+        },
+        "onlythinkmyself": {
+            "index": 2,
+            "score": 15,
+            "text": "刃牙絕不把食物分給任何人",
+            "validators": ["validator.cpp 2"]
+        },
+        "n3000": {
+            "index": 3,
+            "score": 15,
+            "text": "$n\\leq 3000$",
+            "validators": ["validator.cpp 3"]
+        },
+        "selfish": {
+            "index": 4,
+            "score": 15,
+            "text": "刃牙把食物分給別人的次數不超過 $100$ 次",
+            "validators": ["validator.cpp 4"]
+        },
+        "cmdinc": {
+            "index": 5,
+            "score": 15,
+            "text": "刃牙開始分食物後就不再收集新食物，分完後自己才開始吃，之後食物不再分人",
+            "validators": ["validator.cpp 5"]
+        },
+        "full": {
+            "index": 6,
+            "score": 25,
             "text": "無額外限制",
             "validators": []
         }
