@@ -49,6 +49,10 @@
         "verdict": "time_limit",
         "except": {"samples": "correct", "n1": "correct", "n2": "correct", "turn8": "correct", "n8": "correct", "n2000": "correct"}
 	},
+	"tle_next_permutation.cpp": {
+        "verdict": "time_limit",
+        "except": {"samples": "correct", "n1": "correct", "n2": "correct", "turn8": "correct", "n8": "correct"}
+	},
 	"wa_lucky_sort.cpp": {
         "verdict": "incorrect",
         "except": {"n1": "correct"}

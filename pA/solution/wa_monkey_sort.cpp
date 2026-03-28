@@ -17,26 +17,33 @@ int main() {
 		total_dmg += ary[i].second;
 	}
 	int j;
-	int lim = 1e8 / n;
+	int lim = 1e7 / n;
+	if (n < 10)
+	{
+		lim = 1e5;
+	}
 	int result = 0;
 	std::mt19937 rng(std::random_device{}());
 	for (j=0; j<lim&&result<2; j++)
 	{
-	    std::shuffle(ary.begin(), ary.end(), rng);
-		for (i=0; i<n&&hp>0; i++)
+		auto bry = ary;
+	    std::shuffle(bry.begin(), bry.end(), rng);
+	    long long thp = hp;
+	    long long td = total_dmg;
+		for (i=0; i<n&&thp>0; i++)
 		{
-			int t = (ary[i].first + atk - 1) / atk;
-			t = min(1LL*t, (hp + ary[i].second - 1) / ary[i].second);
-			hp -= total_dmg * t;
-			ary[i].first -= t * atk;
-			total_dmg -= ary[i].second;
+			int t = (bry[i].first + atk - 1) / atk;
+			t = min(1LL*t, (thp + bry[i].second - 1) / bry[i].second);
+			thp -= td * t;
+			bry[i].first -= t * atk;
+			td -= bry[i].second;
 		}
 		int rs;
-		if (hp <= 0 && ary.back().first <= 0)
+		if (thp <= 0 && bry.back().first <= 0)
 		{
 			rs = 1;
 		}
-		else if (hp <= 0)
+		else if (thp <= 0)
 		{
 			rs = 0;
 		}
