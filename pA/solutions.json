@@ -1,5 +1,67 @@
 {
 	"correct.cpp": {
 		"verdict": "model_solution"
+	},
+	"wa_less_hp_first.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "onepunch": "correct"}
+	},
+	"wa_more_dmg_first.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "onepunch": "correct", "samedamage": "correct"}
+	},
+	"wa_more_strong_first.cpp": {
+        "verdict": "incorrect",
+        "except": {"n1": "correct"}
+	},
+	"wa_less_strong_first.cpp": {
+        "verdict": "incorrect",
+        "except": {"n1": "correct", "samedamage": "correct"}
+	},
+	"wa_more_dmg_per_hp_first.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "samedamage": "correct"}
+	},
+	"wa_more_dmg_per_hp_first_double.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "samedamage": "correct"}
+	},
+	"wa_compare_strength.cpp": {
+        "verdict": "incorrect"
+	},
+	"wa_overflow.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "onepunch": "correct"}
+	},
+	"wa_overflow2.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "onepunch": "correct"}
+	},
+	"wa_overflow3.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "onepunch": "correct"}
+	},
+	"tle_per_turn.cpp": {
+        "verdict": "time_limit",
+        "except": {"samples": "correct", "turn8": "correct", "onepunch": "correct"}
+	},
+	"tle_n2sort.cpp": {
+        "verdict": "time_limit",
+        "except": {"samples": "correct", "n1": "correct", "n2": "correct", "turn8": "correct", "n8": "correct", "n2000": "correct"}
+	},
+	"wa_lucky_sort.cpp": {
+        "verdict": "incorrect",
+        "except": {"n1": "correct"}
+	},
+	"wa_monkey_sort.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "n2": "correct"}
+	},
+	"wa_deathjudge.cpp": {
+        "verdict": "incorrect"
+	},
+	"wa_operator_priority.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "samedamage": "correct"}
 	}
 }

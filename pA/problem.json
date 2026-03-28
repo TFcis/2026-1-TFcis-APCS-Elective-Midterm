@@ -4,7 +4,7 @@
 	"name": "NoMonsterNoRider",
 	"title": "圍毆沒有武德",
 	"memory_limit": 512,
-	"time_limit": 1.0,
+	"time_limit": 0.5,
 	"type": "Batch",
 	"description": "",
 	"tps_web_url": "",

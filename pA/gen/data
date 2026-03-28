@@ -28,11 +28,15 @@ gen 2 2 0 0 2 CCC
 gen 2 2 1 0 0 AAA
 gen 2 2 1 0 0 BBB
 gen 2 2 1 0 2 CCC
+# 9
 manual 2-01.in
 manual 2-02.in
 manual 2-03.in
 manual 2-04.in
 manual 2-05.in
+manual 2-06.in
+manual 2-07.in
+manual 2-08.in
 
 # subtask 3: turn <= 8
 @subtask turn8
@@ -51,6 +55,9 @@ gen 3 8 1 0 0 AAA
 gen 3 8 -1 0 2 AAA
 gen 3 8 0 0 2 AAA
 gen 3 8 1 0 2 AAA
+# 15
+manual 3-01.in
+manual 3-02.in
 
 # subtask 4: n <= 8
 @subtask n8
@@ -78,6 +85,8 @@ gen 4 8 1 0 1 BBB
 gen 4 8 -1 0 3 BBB
 gen 4 8 0 0 3 BBB
 gen 4 8 1 0 3 BBB
+# 24
+manual 4-01.in
 
 # subtask 5: a >= max(H)
 @subtask onepunch
@@ -96,6 +105,9 @@ gen 5 100000 1 0 2 AAA
 gen 5 100000 -1 0 3 AAA
 gen 5 100000 0 0 3 AAA
 gen 5 100000 1 0 3 AAA
+gen 5 100000 -1 1 3 AAA
+gen 5 100000 0 1 3 AAA
+gen 5 100000 1 1 3 AAA
 
 # subtask 6: D1 = D2 = ... = Dn
 @subtask samedamage
@@ -114,6 +126,9 @@ gen 6 100000 1 0 2 AAA
 gen 6 100000 -1 0 3 AAA
 gen 6 100000 0 0 3 ZZZ
 gen 6 100000 1 0 3 AAA
+gen 6 100000 -1 1 3 AAA
+gen 6 100000 0 1 3 ZZZ
+gen 6 100000 1 1 3 AAA
 
 # subtask 7: n <= 2000
 @subtask n2000
