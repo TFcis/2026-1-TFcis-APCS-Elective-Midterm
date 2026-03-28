@@ -2,7 +2,157 @@
 # TODO
 @subtask samples
 manual example-1.in
+manual example-2.in
+manual example-3.in
 
+# gen [subtask] [n] [result] [mode] [spflag] [random_token]
+
+# subtask 1: n = 1
+@subtask n1
+manual 1-01.in
+manual 1-02.in
+manual 1-03.in
+manual 1-04.in
+manual 1-05.in
+manual 1-06.in
+manual 1-07.in
+
+# subtask 2: n = 2
+@subtask n2
+gen 2 2 -1 0 0 AAA
+gen 2 2 -1 0 0 BBB
+gen 2 2 -1 0 2 CCC
+gen 2 2 0 0 0 AAA
+gen 2 2 0 0 0 BBB
+gen 2 2 0 0 2 CCC
+gen 2 2 1 0 0 AAA
+gen 2 2 1 0 0 BBB
+gen 2 2 1 0 2 CCC
+manual 2-01.in
+manual 2-02.in
+manual 2-03.in
+manual 2-04.in
+manual 2-05.in
+
+# subtask 3: turn <= 8
+@subtask turn8
+gen 3 3 -1 0 0 AAA
+gen 3 3 0 0 0 AAA
+gen 3 3 1 0 0 AAA
+gen 3 3 -1 0 2 AAA
+gen 3 3 0 0 2 AAA
+gen 3 3 1 0 2 AAA
+gen 3 5 -1 0 2 AAA
+gen 3 5 0 0 2 AAA
+gen 3 5 1 0 2 AAA
+gen 3 8 -1 0 0 AAA
+gen 3 8 0 0 0 AAA
+gen 3 8 1 0 0 AAA
+gen 3 8 -1 0 2 AAA
+gen 3 8 0 0 2 AAA
+gen 3 8 1 0 2 AAA
+
+# subtask 4: n <= 8
+@subtask n8
+gen 4 8 -1 0 0 AAA
+gen 4 8 0 0 0 AAA
+gen 4 8 1 0 0 AAA
+gen 4 8 -1 0 2 AAA
+gen 4 8 0 0 2 AAA
+gen 4 8 1 0 2 AAA
+gen 4 8 -1 0 1 AAA
+gen 4 8 0 0 1 AAA
+gen 4 8 1 0 1 AAA
+gen 4 8 -1 0 3 AAA
+gen 4 8 0 0 3 AAA
+gen 4 8 1 0 3 AAA
+gen 4 8 -1 0 0 BBB
+gen 4 8 0 0 0 BBB
+gen 4 8 1 0 0 BBB
+gen 4 8 -1 0 2 BBB
+gen 4 8 0 0 2 BBB
+gen 4 8 1 0 2 BBB
+gen 4 8 -1 0 1 BBB
+gen 4 8 0 0 1 BBB
+gen 4 8 1 0 1 BBB
+gen 4 8 -1 0 3 BBB
+gen 4 8 0 0 3 BBB
+gen 4 8 1 0 3 BBB
+
+# subtask 5: a >= max(H)
+@subtask onepunch
+gen 5 10000 -1 0 0 AAA
+gen 5 10000 0 0 0 AAA
+gen 5 10000 1 0 0 AAA
+gen 5 100000 -1 0 0 AAA
+gen 5 100000 0 0 0 AAA
+gen 5 100000 1 0 0 AAA
+gen 5 100000 -1 0 1 AAA
+gen 5 100000 0 0 1 AAA
+gen 5 100000 1 0 1 AAA
+gen 5 100000 -1 0 2 AAA
+gen 5 100000 0 0 2 AAA
+gen 5 100000 1 0 2 AAA
+gen 5 100000 -1 0 3 AAA
+gen 5 100000 0 0 3 AAA
+gen 5 100000 1 0 3 AAA
+
+# subtask 6: D1 = D2 = ... = Dn
+@subtask samedamage
+gen 6 10000 -1 0 0 AAA
+gen 6 10000 0 0 0 AAA
+gen 6 10000 1 0 0 AAA
+gen 6 100000 -1 0 0 AAA
+gen 6 100000 0 0 0 AAA
+gen 6 100000 1 0 0 AAA
+gen 6 100000 -1 0 1 AAA
+gen 6 100000 0 0 1 AAA
+gen 6 100000 1 0 1 AAA
+gen 6 100000 -1 0 2 AAA
+gen 6 100000 0 0 2 AAA
+gen 6 100000 1 0 2 AAA
+gen 6 100000 -1 0 3 AAA
+gen 6 100000 0 0 3 ZZZ
+gen 6 100000 1 0 3 AAA
+
+# subtask 7: n <= 2000
+@subtask n2000
+gen 7 2000 -1 0 0 AAA
+gen 7 2000 0 0 0 AAA
+gen 7 2000 1 0 0 AAA
+gen 7 2000 -1 0 1 AAA
+gen 7 2000 0 0 1 AAA
+gen 7 2000 1 0 1 AAA
+gen 7 2000 -1 0 2 AAA
+gen 7 2000 0 0 2 AAA
+gen 7 2000 1 0 2 AAA
+gen 7 2000 -1 0 3 AAA
+gen 7 2000 0 0 3 AAA
+gen 7 2000 1 0 3 AAA
+
+# subtask 8: no extra limit
 @subtask full
-gen	20
-gen	30
+gen 8 100000 -1 0 0 AAA
+gen 8 100000 0 0 0 AAA
+gen 8 100000 1 0 0 AAA
+gen 8 100000 -1 0 1 AAA
+gen 8 100000 0 0 1 AAA
+gen 8 100000 1 0 1 AAA
+gen 8 100000 -1 0 2 AAA
+gen 8 100000 0 0 2 AAA
+gen 8 100000 1 0 2 AAA
+gen 8 100000 -1 0 3 AAA
+gen 8 100000 0 0 3 AAA
+gen 8 100000 1 0 3 AAA
+gen 8 100000 -1 1 0 AAA
+gen 8 100000 0 1 0 AAA
+gen 8 100000 1 1 0 AAA
+gen 8 100000 -1 1 1 AAA
+gen 8 100000 0 1 1 AAA
+gen 8 100000 1 1 1 AAA
+gen 8 100000 -1 1 2 AAA
+gen 8 100000 0 1 2 AAA
+gen 8 100000 1 1 2 AAA
+gen 8 100000 -1 1 3 AAA
+gen 8 100000 0 1 3 AAA
+gen 8 100000 1 1 3 AAA
