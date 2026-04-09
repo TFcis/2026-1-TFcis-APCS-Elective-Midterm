@@ -67,5 +67,8 @@
 	"wa_operator_priority.cpp": {
         "verdict": "incorrect",
         "except": {"samples": "correct", "n1": "correct", "samedamage": "correct"}
+	},
+	"py_correct.py": {
+        "verdict": "correct"
 	}
 }
