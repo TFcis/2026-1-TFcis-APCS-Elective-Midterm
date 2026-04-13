@@ -2,7 +2,7 @@
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=6in]{title.png}
+\includegraphics[width=6in]{title.jpg}
 \caption{《魔物獵人物語3》}
 \end{figure}
 
