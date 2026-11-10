@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
 	int subtask = (argc >= 2 ? atoi(argv[1]) : 0);
 	// subtask 1: n = 1
 	// subtask 2: n = 2
-	// subtask 3: turn <= 8
+	// subtask 3: sum of ceil(H_i / a) <= 8
 	// subtask 4: n <= 8
 	// subtask 5: a >= max(H)
 	// subtask 6: D1 = D2 = ... = Dn
@@ -75,30 +75,32 @@ int main(int argc, char* argv[]) {
 	inf.readEoln();
 	inf.readEof();
 	
-	if (subtask == 3)
+	// 題目保證：最佳策略下敵全滅時我方總承受傷害不超過 1e18
 	{
 		vector< array<int, 2> > ary = enemy_ary;
 		sort(ary.begin(), ary.end(), [&atk](const auto &a, const auto &b)
 		{
-			int at = (a[0] + atk - 1) / atk;
-			int bt = (b[0] + atk - 1) / atk;
-			long long p1 = (a[1] + b[1]) * 1LL * at + b[1] * 1LL * bt;
-			long long p2 = (a[1] + b[1]) * 1LL * bt + a[1] * 1LL * at;
-			return p1 < p2;
+			long long at = (a[0] + atk - 1LL) / atk;
+			long long bt = (b[0] + atk - 1LL) / atk;
+			return (__int128)at * b[1] < (__int128)bt * a[1];
 		});
-		int t = 0;
-		long long hp_tmp = hp;
-		for (i=0; i<n&&t<=8; t++)
+		__int128 cur = 0, dmg = 0;
+		for (i=0; i<n; i++)
 		{
-			hp_tmp -= total_dmg;
-			ary[i][0] -= atk;
-			if (ary[i][0] <= 0)
-			{
-				total_dmg -= ary[i][1];
-				++i;
-			}
+			cur += (ary[i][0] + atk - 1LL) / atk;
+			dmg += cur * ary[i][1];
+			ensure(dmg <= (__int128)MAXE18);
 		}
-		ensure(hp_tmp <= 0 || ary.back()[0] <= 0);
+	}
+	if (subtask == 3)
+	{
+		// 擊殺所有敵人所需的攻擊次數總和不超過 8
+		long long total_turns = 0;
+		for (i=0; i<n; i++)
+		{
+			total_turns += (enemy_ary[i][0] + atk - 1LL) / atk;
+		}
+		ensure(total_turns <= 8);
 	}
 
 	return 0;

@@ -2,6 +2,10 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+	"wa_old_model.cpp": {
+        "verdict": "incorrect",
+        "except": {"samples": "correct", "n1": "correct", "onepunch": "correct", "samedamage": "correct"}
+	},
 	"wa_less_hp_first.cpp": {
         "verdict": "incorrect",
         "except": {"samples": "correct", "n1": "correct", "onepunch": "correct"}
@@ -43,7 +47,7 @@
 	},
 	"tle_per_turn.cpp": {
         "verdict": "time_limit",
-        "except": {"samples": "correct", "turn8": "correct", "onepunch": "correct"}
+        "except": {"samples": "correct", "turn8": "correct", "n8": "correct", "onepunch": "correct"}
 	},
 	"tle_n2sort.cpp": {
         "verdict": "time_limit",

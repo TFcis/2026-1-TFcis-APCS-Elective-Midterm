@@ -24,7 +24,7 @@
 		"turn8": {
             "index": 3,
             "score": 10,
-            "text": "戰鬥 $8$ 回合內結束",
+            "text": "$\\sum_{i=1}^{n} \\lceil H_i / a \\rceil \\leq 8$",
             "validators": ["validator.cpp 3"]
         },
 		"n8": {

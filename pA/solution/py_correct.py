@@ -2,46 +2,35 @@ import sys
 from functools import cmp_to_key
 
 def main():
-    input_data = sys.stdin.read().split()
-    idx = 0
+    data = sys.stdin.read().split()
+    atk, hp, n = int(data[0]), int(data[1]), int(data[2])
+    H = list(map(int, data[3:3 + n]))
+    D = list(map(int, data[3 + n:3 + 2 * n]))
+    t = [(h + atk - 1) // atk for h in H]
 
-    atk = int(input_data[idx]); idx += 1
-    hp  = int(input_data[idx]); idx += 1
-    n   = int(input_data[idx]); idx += 1
-
-    ary = [[0, 0] for _ in range(n)]
-
-    for i in range(n):
-        ary[i][0] = int(input_data[idx]); idx += 1
-
-    total_dmg = 0
-    for i in range(n):
-        ary[i][1] = int(input_data[idx]); idx += 1
-        total_dmg += ary[i][1]
-
-    def cmp(a, b):
-        at = (a[0] + atk - 1) // atk
-        bt = (b[0] + atk - 1) // atk
-        pa = (a[1] + b[1]) * at + b[1] * bt
-        pb = (a[1] + b[1]) * bt + a[1] * at
-        return -1 if pa < pb else (1 if pa > pb else 0)
-
-    ary.sort(key=cmp_to_key(cmp))
-
-    i = 0
-    while i < n and hp > 0:
-        t = (ary[i][0] + atk - 1) // atk
-        t = min(t, (hp + ary[i][1] - 1) // ary[i][1])
-        hp -= total_dmg * t
-        ary[i][0] -= t * atk
-        total_dmg -= ary[i][1]
-        i += 1
-
-    if hp <= 0 and ary[-1][0] <= 0:
-        print("Draw")
-    elif hp <= 0:
-        print("Lose")
-    else:
+    # 依 t/D 由小到大排序，使總承受傷害最小
+    order = sorted(range(n), key=cmp_to_key(
+        lambda x, y: (t[x] * D[y] > t[y] * D[x]) - (t[x] * D[y] < t[y] * D[x])))
+    S = 0
+    cur = 0
+    for i in order:
+        cur += t[i]
+        S += D[i] * cur
+    if S < hp:
         print("Win")
+        return
+
+    # 枚舉最後一位被擊殺的敵人 j，其餘維持排序順序
+    # 最後一回合之前的承受傷害 = S + D_j * tail_j - t_j * suf_j - D_j
+    tail = 0
+    suf = 0
+    best = None
+    for j in reversed(order):
+        pre = S + D[j] * tail - t[j] * suf - D[j]
+        if best is None or pre < best:
+            best = pre
+        tail += t[j]
+        suf += D[j]
+    print("Draw" if best < hp else "Lose")
 
 main()
